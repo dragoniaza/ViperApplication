@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Detail View-->
+        <scene sceneID="Z7A-uo-1qE">
+            <objects>
+                <viewController storyboardIdentifier="CameraDetailViewController" id="XNL-pv-SJN" customClass="CameraDetailView" customModule="ViperApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="10d-fH-08j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uNy-oy-N5y" userLabel="CameraImage">
+                                <rect key="frame" x="87" y="340" width="240" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Hch-Cf-3ow"/>
+                                    <constraint firstAttribute="width" secondItem="uNy-oy-N5y" secondAttribute="height" multiplier="10:9" id="iuT-oO-VOc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyC-Xj-dh4" userLabel="PriceLbl">
+                                <rect key="frame" x="187.5" y="633" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-hL-jiZ" userLabel="CameraLbl">
+                                <rect key="frame" x="177" y="597" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qfh-hL-jiZ" firstAttribute="top" secondItem="uNy-oy-N5y" secondAttribute="bottom" constant="41" id="USf-77-HKU"/>
+                            <constraint firstItem="FyC-Xj-dh4" firstAttribute="top" secondItem="Qfh-hL-jiZ" secondAttribute="bottom" constant="15" id="cYB-Jd-2hC"/>
+                            <constraint firstItem="FyC-Xj-dh4" firstAttribute="centerX" secondItem="uNy-oy-N5y" secondAttribute="centerX" id="da6-RO-EFz"/>
+                            <constraint firstItem="FyC-Xj-dh4" firstAttribute="top" secondItem="Qfh-hL-jiZ" secondAttribute="bottom" constant="15" id="isu-BB-hh8"/>
+                            <constraint firstItem="uNy-oy-N5y" firstAttribute="centerX" secondItem="10d-fH-08j" secondAttribute="centerX" id="k0G-We-1C5"/>
+                            <constraint firstItem="uNy-oy-N5y" firstAttribute="centerY" secondItem="10d-fH-08j" secondAttribute="centerY" id="kyl-f8-e47"/>
+                            <constraint firstItem="Qfh-hL-jiZ" firstAttribute="centerX" secondItem="uNy-oy-N5y" secondAttribute="centerX" id="yzr-2h-ptN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Wv-Dq-OR9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="46K-Rp-m4C">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="dOR-ul-iDt">
+                            <connections>
+                                <action selector="barButtonBackPress:" destination="XNL-pv-SJN" id="BnC-Bn-Oeq"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="edit" id="82N-yA-Xhi">
+                                <connections>
+                                    <action selector="barButtonEditPress:" destination="XNL-pv-SJN" id="3Zf-OT-OSa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="Cag-Tf-f2l">
+                                <connections>
+                                    <action selector="barButtonTrashPress:" destination="XNL-pv-SJN" id="LHl-AJ-KfL"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CameraImage" destination="uNy-oy-N5y" id="UIb-k0-eC1"/>
+                        <outlet property="PriceLbl" destination="FyC-Xj-dh4" id="qch-qm-qyU"/>
+                        <outlet property="barButtonBack" destination="dOR-ul-iDt" id="hOj-1u-B8y"/>
+                        <outlet property="barButtonEdit" destination="82N-yA-Xhi" id="8uv-m4-3jc"/>
+                        <outlet property="barButtonTrash" destination="Cag-Tf-f2l" id="HCh-uG-8wR"/>
+                        <outlet property="cameraImage" destination="uNy-oy-N5y" id="t17-pE-B2B"/>
+                        <outlet property="cameraNameLbl" destination="Qfh-hL-jiZ" id="Abc-I7-WTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7z7-Xe-BW2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334.7826086956522" y="547.76785714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="41E-Sy-YNR">
+            <objects>
+                <navigationController storyboardIdentifier="CameraDetailViewNavigatorController" automaticallyAdjustsScrollViewInsets="NO" id="4IP-Xc-xAi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="12W-hL-1qz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XNL-pv-SJN" kind="relationship" relationship="rootViewController" id="frL-hL-24n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omV-ib-nnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.63768115942031" y="547.76785714285711"/>
+        </scene>
+    </scenes>
+</document>
