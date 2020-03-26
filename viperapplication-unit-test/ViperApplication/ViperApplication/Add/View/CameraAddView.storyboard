@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Adding New Camera-->
+        <scene sceneID="YB1-Uy-HQL">
+            <objects>
+                <viewController storyboardIdentifier="CameraAddView" id="cJo-7o-4jH" customClass="CameraAddView" customModule="ViperApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wyb-VC-pQf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kUJ-sJ-jOs">
+                                <rect key="frame" x="20" y="377.5" width="374" height="141"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M88-49-B40">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="65.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX8-l1-2wY">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adding Camera Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NrB-8K-rUq">
+                                                <rect key="frame" x="0.0" y="35.5" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vL0-F4-dag">
+                                        <rect key="frame" x="0.0" y="75.5" width="374" height="65.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlz-WH-fhh">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adding Camera Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NsF-T7-DPz">
+                                                <rect key="frame" x="0.0" y="35.5" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kUJ-sJ-jOs" firstAttribute="leading" secondItem="thz-W5-xCH" secondAttribute="leading" constant="20" id="2L3-Pe-mNd"/>
+                            <constraint firstItem="kUJ-sJ-jOs" firstAttribute="centerY" secondItem="wyb-VC-pQf" secondAttribute="centerY" id="4bM-ry-XpX"/>
+                            <constraint firstItem="thz-W5-xCH" firstAttribute="trailing" secondItem="kUJ-sJ-jOs" secondAttribute="trailing" constant="20" id="Bev-38-6W5"/>
+                            <constraint firstItem="kUJ-sJ-jOs" firstAttribute="centerX" secondItem="wyb-VC-pQf" secondAttribute="centerX" id="pVA-EM-HNa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="thz-W5-xCH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Adding New Camera" id="aAd-m4-QqB">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LWZ-i8-Wsi">
+                            <connections>
+                                <action selector="pressCancleButton:" destination="cJo-7o-4jH" id="s5Z-6B-WlV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ygV-bd-JVl">
+                            <connections>
+                                <action selector="pressDoneButton:" destination="cJo-7o-4jH" id="0aT-sV-a4y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButtonCancle" destination="LWZ-i8-Wsi" id="VYi-9A-v2I"/>
+                        <outlet property="barButtonDone" destination="ygV-bd-JVl" id="Rwq-Sk-yl5"/>
+                        <outlet property="cameraNameTextField" destination="NrB-8K-rUq" id="jg7-dW-E46"/>
+                        <outlet property="cameraPriceTextField" destination="NsF-T7-DPz" id="QFk-Mu-KOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEN-C6-fbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1335" y="-163"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="310-te-Qs7">
+            <objects>
+                <navigationController storyboardIdentifier="CameraAddViewNavigator" automaticallyAdjustsScrollViewInsets="NO" id="MoJ-sJ-DwI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cG3-Ll-TQR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cJo-7o-4jH" kind="relationship" relationship="rootViewController" id="JUO-EE-TZ3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCe-WC-02w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="-163"/>
+        </scene>
+    </scenes>
+</document>
